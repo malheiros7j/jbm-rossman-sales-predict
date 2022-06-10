@@ -5,23 +5,7 @@ import requests
 from flask import Flask, request, Response
 
 # Constant
-token = '5311448021:AAEri2dL_XsL-ySZ8HShfKMlknUiMhyqY7A'
-# chat_id = 1396523204
-
-# # Info about the bot
-# https://api.telegram.org/bot5311448021:AAEri2dL_XsL-ySZ8HShfKMlknUiMhyqY7A/getMe
-
-# # Get Update
-# https://api.telegram.org/bot5311448021:AAEri2dL_XsL-ySZ8HShfKMlknUiMhyqY7A/getUpdates
-
-# # Send Message
-# https://api.telegram.org/bot5311448021:AAEri2dL_XsL-ySZ8HShfKMlknUiMhyqY7A/sendMessage?chat_id=1396523204&text=Yes, I am.
-
-
-## WebHook Heroku
-
-# https://api.telegram.org/bot5311448021:AAEri2dL_XsL-ySZ8HShfKMlknUiMhyqY7A/setWebhook?url=https://rossman-bot-jordanm.herokuapp.com/
-
+token = ''
 
 def send_message(chat_id,text):
 	url = 'https://api.telegram.org/bot{}'.format(token)
