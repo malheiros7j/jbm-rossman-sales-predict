@@ -1,10 +1,7 @@
 # Rossman Drugstore Sales Prediction
 
 <!-- COLOCAR IMAGEM ROSSMAN -->
-
-#real Introduction Header
-#real-introduction-header
-## Introdução
+# Introduction
 Esse é um projeto end-to-end de Data Science com modelo de regressão adaptada para séries temporais. No qual criamos 4 tipos de modelos para predizer o valor da vendas das lojas nas próximas 6 semanas. As previsões podem ser acessadas pelo usuário por meio de um BOT no aplicativo do Telegram.
 
 Esse repósitório contém a solução para a resolução de uma problema do Kaggle: https://www.kaggle.com/c/rossmann-store-sales 
@@ -13,7 +10,7 @@ Esse projeto faz parte da "Comunidade DS" que é um ambiente de estudo que promo
 
 ### Plano de Desenvolvimento do Projeto de Data Science
 Esse projeto foi desenvolvido seguindo o método CRISP-DS(Cross-Industry Standard Process - Data Science). Essa é uma metodologia capaz de transformar os dados da empresa em conhecimento e informações que auxiliam na toma de decisão. A metodologia CRISP-DM define o ciclo de vida do projeto, dividindo-o em seis etapas:
-#### 0.1 [Go to Introduction ] (real-indroduction-header)
+#### 0.1 [Introduction](#real-introduction)
 #### 1.0 Entendimento do Problema de Negócio
 #### 2.0 Coleção dos Dados
 #### 3.0 Limpeza de Dados
@@ -25,7 +22,6 @@ Esse projeto foi desenvolvido seguindo o método CRISP-DS(Cross-Industry Standar
 #### 9.0 Conclusão
 
 <!-- ***** COLOCAR IMAGEM ****** -->
-[Go to Introduction](#real-introduction-header)
 
 
 # Planejamento
