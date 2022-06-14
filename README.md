@@ -1,7 +1,7 @@
 # Rossman Drugstore Sales Prediction
 
 <!-- COLOCAR IMAGEM ROSSMAN -->
-#Real Introduction 
+# Introdução 
 Esse é um projeto end-to-end de Data Science com modelo de regressão adaptada para séries temporais. No qual criamos 4 tipos de modelos para predizer o valor da vendas das lojas nas próximas 6 semanas. As previsões podem ser acessadas pelo usuário por meio de um BOT no aplicativo do Telegram.
 
 Esse repósitório contém a solução para a resolução de uma problema do Kaggle: https://www.kaggle.com/c/rossmann-store-sales 
@@ -10,22 +10,20 @@ Esse projeto faz parte da "Comunidade DS" que é um ambiente de estudo que promo
 
 ### Plano de Desenvolvimento do Projeto de Data Science
 Esse projeto foi desenvolvido seguindo o método CRISP-DS(Cross-Industry Standard Process - Data Science). Essa é uma metodologia capaz de transformar os dados da empresa em conhecimento e informações que auxiliam na toma de decisão. A metodologia CRISP-DM define o ciclo de vida do projeto, dividindo-o em seis etapas:
-#### 0.1 [Introduction](#real-introduction)
-#### 1.0 Entendimento do Problema de Negócio
-#### 2.0 Coleção dos Dados
-#### 3.0 Limpeza de Dados
-#### 4.0 Análise Exploratória dos Dados
-#### 5.0 Preparação dos Dados
-#### 6.0 Modelos de Machine Learning e Fine-Tuning.
-#### 7.0 Avaliação dos Resultados do Modelo e Tradução para Negócio.
-#### 8.0 Modelo em Produção
-#### 9.0 Conclusão
+* Entendimento do Problema de Negócio 
+* Coleção dos Dados
+* Limpeza de Dados
+* Análise Exploratória dos Dados
+* Preparação dos Dados
+* Modelos de Machine Learning e Fine-Tuning.
+* Avaliação dos Resultados do Modelo e Tradução para Negócio.
+* Modelo em Produção
+
 
 <!-- ***** COLOCAR IMAGEM ****** -->
 
-
 # Planejamento
-1. Problema de Negócio e Descrição
+1. [Problema de Negócio e Descrição](#problema-de-negócio-e-descrição)
 2. Base de Dados
 3. Estratégia de Solução
 4. Exploration Data Analysis 
@@ -34,4 +32,12 @@ Esse projeto foi desenvolvido seguindo o método CRISP-DS(Cross-Industry Standar
 7. Resultados de Negócio
 8. Conclusão
 9. Próximos Passos
+
+
+# 1. Problema de Negócio e Descrição
+blablabla
+blablalb
+blbla
+blalbv
+
 
