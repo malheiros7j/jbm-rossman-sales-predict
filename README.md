@@ -1,7 +1,7 @@
 # Rossman Drugstore Sales Prediction
 
 <!-- COLOCAR IMAGEM ROSSMAN -->
-# Introduction
+#Real Introduction 
 Esse é um projeto end-to-end de Data Science com modelo de regressão adaptada para séries temporais. No qual criamos 4 tipos de modelos para predizer o valor da vendas das lojas nas próximas 6 semanas. As previsões podem ser acessadas pelo usuário por meio de um BOT no aplicativo do Telegram.
 
 Esse repósitório contém a solução para a resolução de uma problema do Kaggle: https://www.kaggle.com/c/rossmann-store-sales 
