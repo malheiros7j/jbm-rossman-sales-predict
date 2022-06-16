@@ -91,7 +91,7 @@ Sessão que trata da preparação dos dados para que os algoritmos de Machine Le
 A seleção dos atributos foi realizada utilizando o método de seleção de variáveis Boruta. No qual os atributos mais significativos foram selecionados para que a perfomance do modelo fosse maximizada.
 ### Passo 07. Modelo de Machine Learning
 Realização do treinamento dos modelos de Machine Learning . O modelo que apresentou a melhor perfomance diante a base de dados com cross-validation aplicada seguiu adiante para a hiper parametrização das variáveis daquele modelo, visando otimizar a generalização do modelo.
-### Passo 08. Hypervfhnjtfdjjjjjjjjjjjj  Parameter Fine Tuning
+### Passo 08. Hyper Parameter Fine Tuning
 Foi encontrado os melhores parâmetros que maximizavam o aprendizado do modelo. Esses parâmetro foram definidos com base no método de RandomSearch.
 ### Passo 09. Conversão do Desempenho do Modelo em Valor de Negócio
 Nesse passo o desempenho do modelo foi analisado diante uma perspectiva de negócio,e traduzido para valores de negócio.
@@ -133,8 +133,6 @@ Analise exploratoria de Dados | Insights | Analises Univarias e Multivariadas | 
 ## 4.3 Análise Multivariada
 ![multivariate-analysis!](analysis-images/multivariate-analysis.jpeg)
 
-
-## 
 
 # 5. Seleção do Modelo de Machine Learning 
 Tipos de Modelos Treinados
