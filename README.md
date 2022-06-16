@@ -1,6 +1,6 @@
 # Rossman Drugstore Sales Prediction
 
-<!-- COLOCAR IMAGEM ROSSMAN -->
+![Rossman!](img/rossman.jpg)
 # Introdução 
 Esse é um projeto end-to-end de Data Science com modelo de regressão adaptada para séries temporais. No qual criamos 4 tipos de modelos para predizer o valor da vendas das lojas nas próximas 6 semanas. As previsões podem ser acessadas pelo usuário por meio de um BOT no aplicativo do Telegram.
 
@@ -20,7 +20,7 @@ Esse projeto foi desenvolvido seguindo o método CRISP-DS(Cross-Industry Standar
 * Modelo em Produção
 
 
-<!-- ***** COLOCAR IMAGEM ****** -->
+![crisp!](img/ds.jpeg)
 
 ### Planejamento
 * [1. Descrição e Problema de Negócio](#1-descrição-e-problema-de-negócio)
@@ -105,18 +105,34 @@ Criação de um bot no Aplicativo de mensagens do Telegram. Cuja consulta das pr
 Analise exploratoria de Dados | Insights | Analises Univarias e Multivariadas | Hipóteses 
 ## 4.1 Análise Univariada
 * Variáveis Numéricas: o histograma abaixo mostra como está organizada a distribuição das variáveis númericas do nosso conjunto de dados.
+![Numerical-Variables!](analysis-images/univariate-analysis.jpeg)
 
 ## 4.2 Análise Bivariada
-H2. Lojas com competidores mais proximos deveriam vender menos.
-H3. Lojas com competidores à mais tempo deveriam vender mais.
-H7. Lojas abertas durante o feriado de Natal deveriam vender mais
-H8. Lojas deveriam vender mais ao longo dos anos
-H9. Lojas deveriam vender mais no segundo semestre do ano
-H10. Lojas deveriam vender mais depois do dia 10 de cada mês
-H11. Lojas deveriam vender menos aos finais de semana
-,lkl
+### H2. Lojas com competidores mais proximos deveriam vender menos.
+![H2!](analysis-images/h2.jpeg)
+
+### H3. Lojas com competidores à mais tempo deveriam vender mais.
+![H3!](analysis-images/h3.jpeg)
+
+### H7. Lojas abertas durante o feriado de Natal deveriam vender mais
+![H7!](analysis-images/h7.jpeg)
+
+### H8. Lojas deveriam vender mais ao longo dos anos
+![H8!](analysis-images/h8.jpeg)
+
+### H9. Lojas deveriam vender mais no segundo semestre do ano
+![H9!](analysis-images/h9.jpeg)
+
+### H10. Lojas deveriam vender mais depois do dia 10 de cada mês
+![H10!](analysis-images/h10.jpeg)
+
+### H11. Lojas deveriam vender menos aos finais de semana
+![H11!](analysis-images/h11.jpeg)
+
 
 ## 4.3 Análise Multivariada
+![multivariate-analysis!](analysis-images/multivariate-analysis.jpeg)
+
 
 ## 
 
