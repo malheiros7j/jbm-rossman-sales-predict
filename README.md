@@ -251,11 +251,8 @@ O modelo XGboost teve um bom desempenho para as lojas Rossman, porém tivemos al
 |841 |118983.031250|   118276.835387 |  119689.227113 |  706.195863 | 0.257374
 |274 |194824.750000|   193459.754775 |  196189.745225 |  1364.995225| 0.234964
 
-
-
-
-
-
+![error!](img/mape-store.png)
+![erro2](img/erros.png)
 
 
 # 8. Conclusão
