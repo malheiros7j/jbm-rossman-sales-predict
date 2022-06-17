@@ -19,7 +19,6 @@ Esse projeto foi desenvolvido seguindo o método CRISP-DS(Cross-Industry Standar
 * Avaliação dos Resultados do Modelo e Tradução para Negócio.
 * Modelo em Produção
 
-
 ![crisp!](img/ds.jpeg)
 
 ### Planejamento
@@ -102,37 +101,80 @@ Publicação do modelo em um ambiente de produção em nuvem (Heroku) para que f
 Criação de um bot no Aplicativo de mensagens do Telegram. Cuja consulta das previsões podem ser feitas de qualquer lugar a qualquer momento apenas utilizando uma conexão com a internet e o aplicativo no smartphone.
 
 # 4. Exploration Data Analysis 
-Analise exploratoria de Dados | Insights | Analises Univarias e Multivariadas | Hipóteses 
 ## 4.1 Análise Univariada
 * Variáveis Numéricas: o histograma abaixo mostra como está organizada a distribuição das variáveis númericas do nosso conjunto de dados.
+
 ![Numerical-Variables!](analysis-images/univariate-analysis.jpeg)
 
 ## 4.2 Análise Bivariada
 ### H2. Lojas com competidores mais proximos deveriam vender menos.
+**FALSO**, lojas com competidores mais próximos vendem mais.
+* No 1º gráfico podemos ver que a maioria dos dados estão concentrados num range de distância de 0 a 25000. 
+* No 2º gráfico foi feito um agrupamento por intervalos de distância, como observado as lojas que tem competidores mais próximos tem mais vendas.
+* O heatmap demonstra uma correlação negativa, isso significa que a variável é relevante mas não muito. 
+ 
 ![H2!](analysis-images/h2.jpeg)
 
 ### H3. Lojas com competidores à mais tempo deveriam vender mais.
+**FALSO**, lojas com competidores à mais tempo vendem menos. 
+* A variável "competition_time_month" foi criada e indica há quanto tempo em meses aquela loja enfreta uma competição. PS: valores negativos significa que o competidor ainda não iniciou as vendas.
+* Podemos ver que as lojas que tem competidores há mais tempo vendem menos.
+
 ![H3!](analysis-images/h3.jpeg)
 
-### H7. Lojas abertas durante o feriado de Natal deveriam vender mais
-![H7!](analysis-images/h7.jpeg)
-
-### H8. Lojas deveriam vender mais ao longo dos anos
-![H8!](analysis-images/h8.jpeg)
-
 ### H9. Lojas deveriam vender mais no segundo semestre do ano
+**FALSO**, lojas vendem mais no 1º semestre do ano.
+* Como podemos ver, durante os 6 primeiros meses as lojas vendem mais do que o resto do ano.
+* Correlação muito forte negativamente, essa é considerada uma das variáveis mais importantes para modelo. 
+
 ![H9!](analysis-images/h9.jpeg)
 
 ### H10. Lojas deveriam vender mais depois do dia 10 de cada mês
+**VERDADEIRO**, lojas vendem mais após dia 10 de todo mês.
+* Nessa hipótese a ideia era verificar se as vendas no início do mês, no qual geralmente é feito o pagamento de salário consegueria alcançar em vendas os 20 dias restantes do mês.
+* Lojas vendem menos no período inicial de 10 dias de cada mês.
+* Correlação Negativa.
+
 ![H10!](analysis-images/h10.jpeg)
 
 ### H11. Lojas deveriam vender menos aos finais de semana
+**VERDADEIRO**, lojas vendem mais durante os dias regulares da semana.
+* Correlação forte negativamente. Isso significa que se as lojas se encontrarem no período de final de semana, irão vender menos.
+
 ![H11!](analysis-images/h11.jpeg)
+
+### Tabela de Insights 
+
+| Hipóteses | Condição| Relevância |
+| :-------- | :------- | :--------  |
+|H1. Lojas com maior sortimento deveriam vender mais|Falsa|Baixa|
+|H2. Lojas com competidores mais próximos deveriam vender menos.|Falsa|Média|
+|H3. Lojas com competidores à mais tempo deveriam vender mais.|Falsa|Média|
+|H4. Lojas com promoções mais ativas por mais tempo deveriam vender mais.|Falsa|Baixa|
+|H5. Lojas com mais dias de promoção deveriam vender mais.| --- |---|
+|H6. Lojas com mais promoções consecutivas deveriam vender mais.|Falsa|Baixa|
+|H7. Lojas abertas durante o feriado de Natal deveriam vender mais|Falsa|Média|
+|H8. Lojas deveriam vender mais ao longo dos anos.|Falsa|Alta|
+|H9. Lojas deveriam vender mais no segundo semestre do ano.|Falsa|Alta|
+|H10 .Lojas deveriam vender mais depois do dia 10 de cada mês.|Verdadeira|Alta|
+|H11 .Lojas deveriam vender menos aos finais de semana.|Verdadeira|Alta|
+|H12 .Lojas deveriam vender menos durantes os feriados escolares.|Verdadeira|Baixa|
 
 
 ## 4.3 Análise Multivariada
-![multivariate-analysis!](analysis-images/multivariate-analysis.jpeg)
 
+![multivariate-analysis!](analysis-images/multivariate-analysis.jpeg)
+ 
+ ### 1 Correlação entre as variáveis independentes e a variável resposta
+ * Variáveis com correlação positiva com as vendas:
+   * **Forte:** customers, open. 
+   * **Média:** promo
+   * **Fraca:** competition_open_since_year, promo2_since_year
+
+* Variáveis com correlação negativa com as vendas:
+  * **Forte:** -
+  * **Média:** day_of_week
+  * **Fraca:** promo2, is_promo
 
 # 5. Seleção do Modelo de Machine Learning 
 Tipos de Modelos Treinados
