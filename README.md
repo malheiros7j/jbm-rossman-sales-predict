@@ -1,5 +1,7 @@
 # Rossman Drugstore Sales Prediction
 
+
+
 ![Rossman!](img/rossman.jpg)
 # Introdução 
 Esse é um projeto end-to-end de Data Science com modelo de regressão adaptada para séries temporais. No qual criamos 4 tipos de modelos para predizer o valor da vendas das lojas nas próximas 6 semanas. As previsões podem ser acessadas pelo usuário por meio de um BOT no aplicativo do Telegram.
@@ -165,24 +167,97 @@ Criação de um bot no Aplicativo de mensagens do Telegram. Cuja consulta das pr
 
 ![multivariate-analysis!](analysis-images/multivariate-analysis.jpeg)
  
- ### 1 Correlação entre as variáveis independentes e a variável resposta
+ ### Correlação entre as variáveis independentes e a variável resposta
  * Variáveis com correlação positiva com as vendas:
-   * **Forte:** customers, open. 
-   * **Média:** promo
-   * **Fraca:** competition_open_since_year, promo2_since_year
+   * **Forte:** > *customers, open*
+   * **Média:** > *promo*
+   * **Fraca:** > *competition_open_since_year, promo2_since_year*
 
 * Variáveis com correlação negativa com as vendas:
   * **Forte:** -
-  * **Média:** day_of_week
-  * **Fraca:** promo2, is_promo
+  * **Média:** > *day_of_week*
+  * **Fraca:** > *promo2, is_promo*
 
 # 5. Seleção do Modelo de Machine Learning 
-Tipos de Modelos Treinados
+Os seguintes algoritmos de Machine Learning foram aplicados:
+* Mean Average Model (Nosso baseline);
+* Linear Regression Model;
+* Linear Regression Regularized Model - Lasso;
+* Random Forest Regression;
+* XGBoost Forest Regression;
+
+O método de cross-validation foi utilizado em todos modelos.
 
 # 6. Perfomance do Modelo
-Perfomance do Modelo de Machine Learning treinado
+O modelo RandomForestRegressor foi o modelo que aprensentou o melhor desempenho em Single Perfomance, com um percentual de Erro médio (MAPE) de aproximadamente 10%. No entanto nesse projeto foi optado a utilização do modelo **XGBoost Regressor** visto que a perfomance do modelo é equivalente a RandomForest, e ele lida melhor com base de dados maiores e tende a ser mais rápido em sua etapa de treinamento do modelo.
+
+|Model Name	| MAE	| MAPE	| RMSE|
+|---------|----|----|----|
+|Random Forest Regressor	|679.098387	|0.099882	| 1009.869873
+|**XGBoost Regressor**	|**711.319910**	|**0.103848**| **1026.422526**|
+|Average Model	|1354.800353	|0.206400	|1835.135542|
+|Linear Regression	|1867.089774|	0.292694|	2671.049215|
+|Linear Regression Regularized - Lasso	|1891.704880	|0.289106	|2744.451735|
+
+A real perfomance dos modelos utilizando método CROSS-VALIDATION.
+
+|Model Name	|MAE CV	|MAPE CV	|RMSE CV|
+|----------| -------|---------|--------|
+|Random Forest Regression	|837.47 +/- 218.61	|0.12 +/- 0.02	|1257.22 +/- 319.82|
+|**XGBoost Regressor**|**923.71 +/- 150.9**	|**0.13 +/- 0.01**	|**1323.78 +/- 214.82**|
+|Linear Regression	|2081.73 +/- 295.63	|0.3 +/- 0.02	|2952.52 +/- 468.37|
+|Linear Regression Regularized	|2116.38 +/- 341.5	|0.29 +/- 0.01	|3057.75 +/- 504.26|
+
+Escolhido o modelo de Regressão XGBoost partimos para a etapa de HyperParamater Fine-Tuning que consiste em encontrar os melhores parâmetros de treino para maximizar o aprendizado do modelo. Após encontramos os valores ótimos para o modelo por meio do método RandomSearch os valores finais de desemepenho do modelo foram:
+
+
+## Final-Performance Fine-Tuned CV Model
+|Model Name | MAE CV | MAPE CV | RMSE CV |
+|-----|----|----|-----
+|XGBoost Regressor | CV	887.49 +/- 148.25	|0.13 +/- 0.02	|1253.53 +/- 203.62
+
 # 7. Resultados de Negócio
-Avaliação do Resultado do modelo como negócio 
+Com base no método atual de previsão de vendas é possível analisarmos a diferença de performance entre o modelo utilizado ( Average Model) e o modelo proposto XGBoost Regressor.
+
+## Model Atual baseado na média de vendas
+
+|Cenário| Valores|
+|---|---|
+| Predições | R$280.754.389,45| 
+
+## Modelo XGBoost sugerido
+|Cenário|Valores|
+|------|------|
+|Predições|	R$286.772.224,00|
+|Pior Cenário|	R$286.025.344,34|
+|Melhor Cenário|	R$287.519.068,14|
+
+## Diferença entre os Modelos
+|Cenário|Valores|
+|------|------|
+|Pior Cenário|R$5.270.954,89|
+|Melhor Cenário|R$6.764.678,69|
+
+
+O modelo XGboost teve um bom desempenho para as lojas Rossman, porém tivemos algumas lojas as quais o MAPE ficou muito acima do normal, como podemos ver nas tabelas e gráficos abaixo:
+
+|store|  predictions |worst_scenario|  best_scenario|   MAE| MAPE|
+|-----|--------------|--------------|-------------|-------|------|
+|292 |104717.539062|   101427.253881 |  108007.824244 |  3290.285182| **0.558823**
+|909 |237762.593750|   230099.762844 |  245425.424656 |  7662.830906| **0.524063**
+|876 |212583.593750|   208622.899499 |  216544.288001 |  3960.694251| **0.322960**
+|595 |379311.031250|   375259.626940 |  383362.435560 |  4051.404310| **0.280480**
+|722 |351640.437500|   349685.182168 |  353595.692832 |  1955.255332| **0.261245**
+|841 |118983.031250|   118276.835387 |  119689.227113 |  706.195863 | 0.257374
+|274 |194824.750000|   193459.754775 |  196189.745225 |  1364.995225| 0.234964
+
+
+
+
+
+
+
+
 # 8. Conclusão
 Conclusoes e trabalhos Futuros
 # 9. Próximos Passos
