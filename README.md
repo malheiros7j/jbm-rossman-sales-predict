@@ -275,13 +275,15 @@ Forma de Utilização:
 ![telegram!](img/telegram.jpeg)
 
 # 9. Conclusão
+Nesse projeto, foram realizadas todas as etapas necessárias para a implementação de um projeto completo de Data Science em um ambiente de produção. Foi utilizado o método de gerenciamento de projeto chamado CRISP-DM/DS e obteve-se um desempenho satisfatório utilizando o modelo de Regressão XGBoost para realizar a previsão de venda das lojas da rede Rossman para as próximas 6 semanas. Vários Insights de Negócio foram gerados durante a Análise Exploratória de dados que ajudaram o CEO, junto ao time de negócio e o cientista de dados a entenderem melhor o negócio. Tendo em vista esses resultados, o projeto alcançou seu objetivo de encontrar uma solução simples e assertiva para previsão das vendas das lojas, disponibilizando um BOT no Telegram que retorna as previsões geradas pelo modelo de forma rápida e eficaz.
 
 # 10. Aprendizados e Trabalhos Futuros
 
+* Esse problema de predição foi resolvido utilizando técnicas de Regressão adaptadas a Time-Series.
+* A escolha do modelo de Machine Leaning deve-se levar em consideração não só a perfomance do modelo em si, mas também sua generabilidade, levando em consideração o custo de implementação, a dificuldade e tempo de execução de todo projeto.
+* A Análise Explorátoria de Dados se demonstrou uma das etapas mais importantes do projeto, pois é nessa parte que podemos encontrar Insights de Negócio que promovem novos conhecimentos e até contradições que nos fazem repensar o negócio como um tudo. Essa análise também fornece ao cientista de dados uma "direção" de como melhor seu modelo, por meio da criação de novas features e diferentes tipos de abordagem.
 
-
-
-
+**Trabalhos Futuros**
 
 
 
