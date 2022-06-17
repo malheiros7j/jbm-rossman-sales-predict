@@ -219,20 +219,20 @@ Escolhido o modelo de Regressão XGBoost partimos para a etapa de HyperParamater
 # 7. Resultados de Negócio
 Com base no método atual de previsão de vendas é possível analisarmos a diferença de performance entre o modelo utilizado ( Average Model) e o modelo proposto XGBoost Regressor.
 
-## Model Atual baseado na média de vendas
+**Model Atual baseado na média de vendas**
 
 |Cenário| Valores|
 |---|---|
 | Predições | R$280.754.389,45| 
 
-## Modelo XGBoost sugerido
+**Modelo XGBoost sugerido**
 |Cenário|Valores|
 |------|------|
 |Predições|	R$286.772.224,00|
 |Pior Cenário|	R$286.025.344,34|
 |Melhor Cenário|	R$287.519.068,14|
 
-## Diferença entre os Modelos
+**Diferença entre os Modelos**
 |Cenário|Valores|
 |------|------|
 |Pior Cenário|R$5.270.954,89|
@@ -260,14 +260,20 @@ O modelo XGboost teve um bom desempenho para as lojas Rossman, porém tivemos al
 
 * No 3º gráfico podemos ver a distruibuição da taxa de erro, que tem como característica uma forma normal cujo centro está tendendo a 0.
 
-* O 4º gráfico demonstra a dispersão que representa as previsões realizadas em relação aos erros de cada dia de venda. Idealmente, nós teríamos nossos pontos concentrados e formando uma espécie de "tubo", pois dessa forma ela representaria uma baixa variação de erro em todos valores que a previsão de vendas poderiam assumir.
+* O 4º gráfico demonstra a dispersão que representa as previsões realizadas em relação aos erros de cada dia de venda. Idealmente, nós teríamos nossos pontos concentrados e formando uma espécie de "tubo", pois dessa forma ela representaria uma baixa variação de erro em todos valores que a previsão de vendas poderia assumir.
 ![erro2](img/errors.png)
 
 
-
-
 # 8. Modelo em Produção
-Conclusoes e trabalhos Futuros
+O modelo de Machine Learning foi implementado e colocado em produção por meio da plataforma Heroku, que tem como objetivo possibilitar a criação, execução e operação de aplicativos inteiramente localizados em nuvem. 
+Além do modelo em si presente na nuvem, criamos um BOT no aplicativo do Telegram que possibilita ao CEO e os time de negócio da empresa realizarem consultas da previsão de vendas das lojas nas próximas 6 semanas de forma simples e direta. Basta apenas utilizar um smartphone e enviar uma mensagem ao bot no Telegram localizado no endereço: https://t.me/rossman_jordanm_bot.
+
+Forma de Utilização:
+* Criar conta no Telegram em seu smartphone e abrir o link citado acima.
+* Enviar o caracter "/" junto ao número de loja que deseja saber a previsão de venda.
+
+![telegram!](img/telegram.jpeg)
+
 # 9. Conclusão
 
 # 10. Aprendizados e Trabalhos Futuros
