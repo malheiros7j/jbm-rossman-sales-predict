@@ -251,14 +251,26 @@ O modelo XGboost teve um bom desempenho para as lojas Rossman, porém tivemos al
 |841 |118983.031250|   118276.835387 |  119689.227113 |  706.195863 | 0.257374
 |274 |194824.750000|   193459.754775 |  196189.745225 |  1364.995225| 0.234964
 
+* Nesse gráfico, podemos observar a distribuçãos dos erros MAPE para todas as lojas da rede Rossman. É importante notar que existem algumas lojas em específico que são mais desafiadoras que outras na previsão das vendas. Porém, é razoável assumir que nosso modelo desempenhou bem de maneira geral visto que a maioria das nossas lojas está concentrada em uma área com um MAPE próximo a 10%. É claro que, o CEO e a equipe de negócio devem analisar esses dados e definir se é "aceitável" esse valor de erro ou não. 
 ![error!](img/mape-store.png)
-![erro2](img/erros.png)
+
+* Alguns outros gráficos foram plotados com objetivo de fornecer um maior entendimento ao time de negócio como o nosso modelo se comporta de maneira geral. O 1º gráfico nos mostra os valores de vendas (linhas azuis) e a predição do modelo (linhas laranjas) das últimas 6 semanas de venda. Como podemos ver nosso modelo se comporta muito bem, acompanhando de perto as vendas reais.
+
+* No 2º gráfico é representado a taxa de erros com relação as vendas. Essa taxa é calculada pela razão entre os valores preditos e os valores reais de venda observados. Visto que o modelo não possui taxas muito exorbitantes, podemos assumir que ele teve um bom desempenho.
+
+* No 3º gráfico podemos ver a distruibuição da taxa de erro, que tem como característica uma forma normal cujo centro está tendendo a 0.
+
+* O 4º gráfico demonstra a dispersão que representa as previsões realizadas em relação aos erros de cada dia de venda. Idealmente, nós teríamos nossos pontos concentrados e formando uma espécie de "tubo", pois dessa forma ela representaria uma baixa variação de erro em todos valores que a previsão de vendas poderiam assumir.
+![erro2](img/errors.png)
 
 
-# 8. Conclusão
+
+
+# 8. Modelo em Produção
 Conclusoes e trabalhos Futuros
-# 9. Próximos Passos
+# 9. Conclusão
 
+# 10. Aprendizados e Trabalhos Futuros
 
 
 
